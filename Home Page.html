@@ -1,0 +1,1063 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Novira | Secure & Intelligent Digital Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  
+  </head>
+  <body>
+    <!-- ======================= MAIN WEBSITE CONTENT (Hidden until login) ======================= -->
+    <div id="mainSiteContent" style="display: none">
+      <!-- NAVBAR -->
+      <nav
+        class="fixed w-full z-50 nav-blur border-b border-gray-800 transition-all duration-300"
+        id="navbar"
+      >
+        <div
+          class="container mx-auto px-6 py-4 flex justify-between items-center"
+        >
+          <div
+            class="flex items-center gap-3 cursor-pointer"
+            onclick="scrollToTop()"
+          >
+            <img
+              src="https://placehold.co/400x400/0B0E17/00F0FF?text=N&font=montserrat"
+              alt="Novira Logo"
+              class="h-10 w-10 rounded-xl shadow-lg border border-cyan-500/30 logo-pulse"
+            />
+            <div class="text-2xl font-bold tracking-tight">
+              <span class="text-white">NOVIRA</span
+              ><span class="text-cyan-400">.</span>
+            </div>
+          </div>
+          <div
+            class="hidden md:flex space-x-8 text-gray-300 font-medium items-center"
+          >
+            <a href="#home" class="hover:text-cyan-400 transition">Home</a>
+            <a href="#about" class="hover:text-cyan-400 transition">About</a>
+            <a href="#services" class="hover:text-cyan-400 transition"
+              >Services</a
+            >
+            <a href="#portfolio" class="hover:text-cyan-400 transition"
+              >Portfolio</a
+            >
+            <a href="#technologies" class="hover:text-cyan-400 transition"
+              >Tech</a
+            >
+            <a href="#contact" class="hover:text-cyan-400 transition"
+              >Contact</a
+            >
+            <div id="auth-nav-buttons" class="flex gap-3"></div>
+          </div>
+          <div class="md:hidden flex gap-3 items-center">
+            <div id="mobile-auth-icon"></div>
+            <button id="mobile-menu-btn" class="text-2xl">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden bg-[#0B0E17] border-t border-gray-800 py-4 px-6 flex flex-col space-y-4"
+        >
+          <a href="#home" class="hover:text-cyan-400">Home</a>
+          <a href="#about" class="hover:text-cyan-400">About</a>
+          <a href="#services" class="hover:text-cyan-400">Services</a>
+          <a href="#portfolio" class="hover:text-cyan-400">Portfolio</a>
+          <a href="#technologies" class="hover:text-cyan-400">Tech</a>
+          <a href="#contact" class="hover:text-cyan-400">Contact</a>
+          <div
+            id="mobile-auth-links"
+            class="pt-2 border-t border-gray-700 flex flex-col gap-2"
+          ></div>
+        </div>
+      </nav>
+
+      <main>
+        <!-- HOME HERO -->
+        <section
+          id="home"
+          class="pt-32 pb-20 md:pt-40 md:pb-28 px-6 relative overflow-hidden"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-cyan-900/5 via-transparent to-purple-900/10"
+          ></div>
+          <div
+            class="container mx-auto relative z-10 text-center md:text-left md:flex md:items-center md:justify-between"
+          >
+            <div class="md:w-1/2" data-aos="fade-up">
+              <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+                Building
+                <span class="gradient-text">Secure & Intelligent</span> Digital
+                Solutions
+              </h1>
+              <p class="text-gray-400 text-lg mt-6">
+                Novira delivers next-gen cybersecurity, AI, and scalable web &
+                mobile applications.
+              </p>
+              <div
+                class="flex flex-wrap gap-4 mt-8 justify-center md:justify-start"
+              >
+                <a
+                  href="#services"
+                  class="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-semibold transition shadow-lg"
+                  >View Services</a
+                >
+                <a
+                  href="#contact"
+                  class="px-6 py-3 border border-cyan-500 rounded-lg font-semibold hover:bg-cyan-500/10 transition"
+                  >Contact Us</a
+                >
+              </div>
+            </div>
+            <div class="md:w-1/2 mt-12 md:mt-0" data-aos="fade-left">
+              <div class="relative flex justify-center">
+                <div
+                  class="w-80 h-80 rounded-full bg-gradient-to-tr from-cyan-500/20 to-purple-600/20 blur-3xl absolute"
+                ></div>
+                <img
+                  src="https://placehold.co/400x400/0B0E17/00F0FF?text=NOVIRA&font=montserrat"
+                  alt="Novira Logo"
+                  class="relative z-10 w-64 h-64 object-contain rounded-2xl shadow-2xl border-2 border-cyan-500/40 logo-pulse"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Services Preview -->
+        <section class="py-20 bg-[#0F121C] px-6">
+          <div class="container mx-auto text-center" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold">
+              Core <span class="gradient-text">Expertise</span>
+            </h2>
+            <p class="text-gray-400 mt-3">
+              Future-ready services crafted for the digital age
+            </p>
+          </div>
+          <div class="container mx-auto grid md:grid-cols-4 gap-8 mt-12">
+            <div
+              class="bg-[#11151F] p-6 rounded-2xl border border-gray-800 card-hover"
+            >
+              <i class="fas fa-shield-virus text-4xl text-cyan-400"></i>
+              <h3 class="text-xl font-bold mt-4">Cyber Security</h3>
+              <p class="text-gray-400 text-sm">
+                Penetration testing, audits & zero-trust.
+              </p>
+            </div>
+            <div
+              class="bg-[#11151F] p-6 rounded-2xl border border-gray-800 card-hover"
+            >
+              <i class="fas fa-brain text-4xl text-cyan-400"></i>
+              <h3 class="text-xl font-bold mt-4">Artificial Intelligence</h3>
+              <p class="text-gray-400 text-sm">
+                ML models, automation, data intelligence.
+              </p>
+            </div>
+            <div
+              class="bg-[#11151F] p-6 rounded-2xl border border-gray-800 card-hover"
+            >
+              <i class="fas fa-globe text-4xl text-cyan-400"></i>
+              <h3 class="text-xl font-bold mt-4">Web Applications</h3>
+              <p class="text-gray-400 text-sm">
+                SaaS, e-commerce & scalable backend.
+              </p>
+            </div>
+            <div
+              class="bg-[#11151F] p-6 rounded-2xl border border-gray-800 card-hover"
+            >
+              <i class="fas fa-mobile-alt text-4xl text-cyan-400"></i>
+              <h3 class="text-xl font-bold mt-4">Mobile Applications</h3>
+              <p class="text-gray-400 text-sm">
+                Android, iOS & cross-platform.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Why Choose Novira -->
+        <section class="py-20 px-6">
+          <div
+            class="container mx-auto grid md:grid-cols-2 gap-12 items-center"
+          >
+            <div data-aos="fade-right">
+              <h2 class="text-3xl font-bold">
+                Why <span class="gradient-text">Novira</span>?
+              </h2>
+              <div class="mt-8 space-y-5">
+                <div class="flex gap-4">
+                  <i class="fas fa-lock text-cyan-400 text-2xl"></i>
+                  <div>
+                    <h4 class="font-bold">Secure Development</h4>
+                    <p class="text-gray-400">
+                      Security baked into every lifecycle phase.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-4">
+                  <i class="fas fa-microchip text-cyan-400 text-2xl"></i>
+                  <div>
+                    <h4 class="font-bold">Modern Technologies</h4>
+                    <p class="text-gray-400">
+                      React, Next.js, AI tools & cloud-native.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-4">
+                  <i class="fas fa-chart-line text-cyan-400 text-2xl"></i>
+                  <div>
+                    <h4 class="font-bold">Scalable Systems</h4>
+                    <p class="text-gray-400">
+                      Built to grow with your business needs.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-4">
+                  <i class="fas fa-users text-cyan-400 text-2xl"></i>
+                  <div>
+                    <h4 class="font-bold">Expert Team</h4>
+                    <p class="text-gray-400">Cybersecurity & AI specialists.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
+              <div
+                class="bg-[#11151F] p-4 rounded-xl text-center border border-gray-700"
+              >
+                <i class="fab fa-react text-3xl text-cyan-400"></i>
+                <p class="mt-2">React</p>
+              </div>
+              <div
+                class="bg-[#11151F] p-4 rounded-xl text-center border border-gray-700"
+              >
+                <i class="fab fa-python text-3xl text-cyan-400"></i>
+                <p class="mt-2">Python</p>
+              </div>
+              <div
+                class="bg-[#11151F] p-4 rounded-xl text-center border border-gray-700"
+              >
+                <i class="fab fa-node-js text-3xl text-cyan-400"></i>
+                <p class="mt-2">Node.js</p>
+              </div>
+              <div
+                class="bg-[#11151F] p-4 rounded-xl text-center border border-gray-700"
+              >
+                <i class="fas fa-cloud text-3xl text-cyan-400"></i>
+                <p class="mt-2">Cloud/AI</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Portfolio Preview -->
+        <section id="portfolio" class="py-20 bg-[#0F121C] px-6">
+          <div class="container mx-auto text-center" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold">
+              Featured <span class="gradient-text">Projects</span>
+            </h2>
+            <p class="text-gray-400 mt-2">
+              Innovative solutions delivered globally
+            </p>
+          </div>
+          <div class="container mx-auto grid md:grid-cols-3 gap-8 mt-12">
+            <div
+              class="bg-[#11151F] rounded-2xl overflow-hidden border border-gray-700 card-hover"
+            >
+              <div
+                class="h-48 bg-gradient-to-br from-cyan-800 to-purple-800 flex items-center justify-center"
+              >
+                <i class="fas fa-exchange-alt text-6xl text-white/80"></i>
+              </div>
+              <div class="p-5">
+                <h3 class="text-xl font-bold">Sharek App</h3>
+                <p class="text-gray-400 text-sm">
+                  Marketplace for peer-to-peer rental & secure payments.
+                </p>
+                <a
+                  href="#"
+                  class="inline-block mt-4 text-cyan-400 hover:underline"
+                  >View Project →</a
+                >
+              </div>
+            </div>
+            <div
+              class="bg-[#11151F] rounded-2xl overflow-hidden border border-gray-700 card-hover"
+            >
+              <div
+                class="h-48 bg-gradient-to-br from-indigo-800 to-cyan-700 flex items-center justify-center"
+              >
+                <i class="fas fa-robot text-6xl text-white/80"></i>
+              </div>
+              <div class="p-5">
+                <h3 class="text-xl font-bold">AI Security Platform</h3>
+                <p class="text-gray-400 text-sm">
+                  Threat detection using ML & real-time anomaly scoring.
+                </p>
+                <a
+                  href="#"
+                  class="inline-block mt-4 text-cyan-400 hover:underline"
+                  >View Project →</a
+                >
+              </div>
+            </div>
+            <div
+              class="bg-[#11151F] rounded-2xl overflow-hidden border border-gray-700 card-hover"
+            >
+              <div
+                class="h-48 bg-gradient-to-br from-blue-800 to-teal-700 flex items-center justify-center"
+              >
+                <i class="fas fa-chart-simple text-6xl text-white/80"></i>
+              </div>
+              <div class="p-5">
+                <h3 class="text-xl font-bold">Nexus SaaS</h3>
+                <p class="text-gray-400 text-sm">
+                  Scalable analytics dashboard with role-based security.
+                </p>
+                <a
+                  href="#"
+                  class="inline-block mt-4 text-cyan-400 hover:underline"
+                  >View Project →</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ABOUT US - NEW STRUCTURE: Overview + 4 Team Sections -->
+        <section id="about" class="py-20 px-6 bg-[#0F121C]">
+          <div class="container mx-auto max-w-6xl" data-aos="fade-up">
+            <!-- عنوان القسم -->
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
+              About <span class="gradient-text">Novira</span>
+            </h2>
+
+            <!-- نبذة عامة عن الشركة في النص -->
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+              <p class="text-gray-300 text-lg leading-relaxed">
+                <span class="text-cyan-400 font-bold">Novira</span>(Company Overview)
+English Version:
+Novira is a technology-driven company specializing in building secure, scalable, and intelligent digital solutions.
+We empower businesses through advanced software engineering, cybersecurity, and artificial intelligence to deliver high-performance systems that solve real-world problems.
+(Core Expertise)
+English Version:
+At Novira, our core expertise lies in four main domains:
+Cyber Security: Protecting systems, data, and digital assets through advanced security solutions.
+Artificial Intelligence: Building smart systems that automate processes and enhance decision-making.
+Web Applications: Developing scalable and high-performance web platforms.
+Mobile Applications: Creating modern, user-friendly mobile apps for Android and iOS.
+(Featured Projects)
+English Version:
+🔹 Sharek App
+A smart rental marketplace that allows users to rent and list any item securely.
+The platform includes booking systems, secure payments, user verification, and dispute management.
+              </p>
+            </div>
+
+            <!-- تقسيم الفريق إلى 4 أقسام رئيسية -->
+             <div class="mb-16" data-aos="fade-up" data-aos-delay="200">
+              <div
+                class="flex items-center gap-3 mb-6 pb-2 border-b border-cyan-500/30"
+              >
+                <i class="fas fa-code text-3xl text-cyan-400"></i>
+                <h3 class="text-2xl font-bold text-white">
+                  <span class="text-cyan-400">(Founder)</span>
+                </h3>
+              </div>
+                <div
+                  class="bg-[#11151F] rounded-xl p-6 text-center border border-gray-700 hover:border-cyan-500/50 transition"
+                >
+                  <img
+                    src="./imags/Ziad Mohamed.jpg"
+                    alt="Gamal"
+                    class="w-28 h-28 rounded-full mx-auto object-cover border-2 border-cyan-400 mb-3"
+                  />
+                  <h4 class="text-xl font-bold">ENG : Ziad Mohamed</h4>
+                  <p class="text-cyan-400"> Founder & CEO</p>
+                  <p class="text-cyan-400"> Ziad Mohamed – Founder & CEO
+Visionary leader and creator of Novira, driving innovation in cybersecurity, AI, and digital platforms, and leading the development of scalable and secure technology solutions.</p>
+                </div>
+              </div>
+            </div>
+                      <!-- 3. قسم التطوير (Developers Team) -->
+            <div class="mb-16" data-aos="fade-up" data-aos-delay="200">
+              <div
+                class="flex items-center gap-3 mb-6 pb-2 border-b border-cyan-500/30"
+              >
+                <i class="fas fa-code text-3xl text-cyan-400"></i>
+                <h3 class="text-2xl font-bold text-white">
+                  <span class="text-cyan-400">(Developers Team)</span>
+                </h3>
+              </div>
+                <div
+                  class="bg-[#11151F] rounded-xl p-6 text-center border border-gray-700 hover:border-cyan-500/50 transition"
+                >
+                  <img
+                    src="./imags/Gamal.jpeg"
+                    alt="Gamal"
+                    class="w-28 h-28 rounded-full mx-auto object-cover border-2 border-cyan-400 mb-3"
+                  />
+                  <h4 class="text-xl font-bold">ENG : Gamal Raafat Mohamed</h4>
+                  <p class="text-cyan-400">Frontend & Mobile Developer</p>
+                  <p class="text-cyan-400">
+
+Gamal Raafat is a skilled Frontend and Mobile Developer at Novira, specializing in building modern, responsive, and user-friendly web and mobile applications. He focuses on creating seamless user experiences through clean design, efficient code, and optimized performance. With a passion for innovation and attention to detail, Gamal contributes to developing scalable digital solutions that enhance usability and deliver high-quality results.
+</p>
+                </div>
+              </div>
+            </div>
+            <!-- 1. قسم المبيعات (Sales Team) -->
+            <div class="mb-16" data-aos="fade-up">
+              <div
+                class="flex items-center gap-3 mb-6 pb-2 border-b border-cyan-500/30"
+              >
+                <i class="fas fa-chart-line text-3xl text-cyan-400"></i>
+                <h3 class="text-2xl font-bold text-white">
+                  
+                  <span class="text-cyan-400">(Sales Team)</span>
+                </h3>
+              </div>
+              <div class="grid md:grid-cols-2 gap-6">
+                <div
+                  class="bg-[#11151F] rounded-xl p-6 text-center border border-gray-700 hover:border-cyan-500/50 transition"
+                >
+                  <img
+                    src="./imags/Saleh Mahmoud Fathi Elrais.jpeg"
+                    alt="Saleh"
+                    class="w-28 h-28 rounded-full mx-auto object-cover border-2 border-cyan-400 mb-3"
+                  />
+                  <h4 class="text-xl font-bold">
+                    ENG : Saleh Mahmoud Fathi Elrais
+                  </h4>
+                  <p class="text-cyan-400">Sales Manager</p>
+                </div>
+                <div
+                  class="bg-[#11151F] rounded-xl p-6 text-center border border-gray-700 hover:border-cyan-500/50 transition"
+                >
+                  <img
+                    src="./imags/Karim Bassiouni Youssef Youssef.jpeg"
+                    alt="Karim"
+                    class="w-28 h-28 rounded-full mx-auto object-cover border-2 border-cyan-400 mb-3"
+                  />
+                  <h4 class="text-xl font-bold">
+                    ENG : Karim Bassiouni Youssef
+                  </h4>
+                  <p class="text-cyan-400">Sales Executive</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. قسم الأمن السيبراني (Cyber Security Team) -->
+            <div class="mb-16" data-aos="fade-up" data-aos-delay="100">
+              <div
+                class="flex items-center gap-3 mb-6 pb-2 border-b border-cyan-500/30"
+              >
+                <i class="fas fa-shield-haltered text-3xl text-cyan-400"></i>
+                <h3 class="text-2xl font-bold text-white">
+                  <span class="text-cyan-400">(🔐 Cyber Security Team)</span>
+                </h3>
+              </div>
+              <div class="grid md:grid-cols-2 gap-6">
+                <div
+                  class="bg-[#11151F] rounded-xl p-6 text-center border border-gray-700 hover:border-cyan-500/50 transition"
+                >
+                  <img
+                    src="./imags/Sameh Adel Elsayed Abo Elkhair.jpeg"
+                    alt="Sameh"
+                    class="w-28 h-28 rounded-full mx-auto object-cover border-2 border-cyan-400 mb-3"
+                  />
+                  <h4 class="text-xl font-bold">ENG : Sameh Adel Elsayed</h4>
+                  <p class="text-cyan-400">Cyber Security Specialist</p>
+                </div>
+                <div
+                  class="bg-[#11151F] rounded-xl p-6 text-center border border-gray-700 hover:border-cyan-500/50 transition"
+                >
+                  <img
+                    src="./imags/Ziad Mohamed.jpg"
+                    alt="Sameh"
+                    class="w-28 h-28 rounded-full mx-auto object-cover border-2 border-cyan-400 mb-3"
+                  />
+                  <h4 class="text-xl font-bold">ENG : Ziad Mohamed</h4>
+                  <p class="text-cyan-400">Cyber Security Specialist</p>
+                </div>
+              </div>
+            </div>
+              
+                 <!-- 2قسم تطوير الموبايل  (Mobil app Team) -->
+            <div class="mb-16" data-aos="fade-up" data-aos-delay="100">
+              <div
+                class="flex items-center gap-3 mb-6 pb-2 border-b border-cyan-500/30"
+              >
+                <i class="fas fa-shield-haltered text-3xl text-cyan-400"></i>
+                <h3 class="text-2xl font-bold text-white">
+                  <span class="text-cyan-400">(📱Mobil App Team)</span>
+                </h3>
+              </div>
+              <div class="grid md:grid-cols-2 gap-6">
+                <div
+                  class="bg-[#11151F] rounded-xl p-6 text-center border border-gray-700 hover:border-cyan-500/50 transition"
+                >
+                  <img
+                    src="./imags/Ismail Ibrahim Mustafa Ghoniem.jpeg"
+                    alt="Sameh"
+                    class="w-28 h-28 rounded-full mx-auto object-cover border-2 border-cyan-400 mb-3"
+                  />
+                  <h4 class="text-xl font-bold">ENG : Ismail Ibrahim Mustafa Ghoniem</h4>
+                  <p class="text-cyan-400">Mobil App Developer</p>
+                </div>
+                <div
+                  class="bg-[#11151F] rounded-xl p-6 text-center border border-gray-700 hover:border-cyan-500/50 transition"
+                >
+                  <img
+                    src="./imags/Yahya ramadan mahmoud ali ali.jpeg"
+                    alt="Sameh"
+                    class="w-28 h-28 rounded-full mx-auto object-cover border-2 border-cyan-400 mb-3"
+                  />
+                  <h4 class="text-xl font-bold">ENG : Yahya ramadan mahmoud ali ali</h4>
+                  <p class="text-cyan-400">Mobil App Developer</p>
+                </div>
+              </div>
+            </div>
+   
+
+            <!-- 4. قسم خدمة العملاء (Call Center Team) -->
+            <div class="mb-8" data-aos="fade-up" data-aos-delay="300">
+              <div
+                class="flex items-center gap-3 mb-6 pb-2 border-b border-cyan-500/30"
+              >
+                <i class="fas fa-headset text-3xl text-cyan-400"></i>
+                <h3 class="text-2xl font-bold text-white">
+                  <span class="text-cyan-400">(Call Center Team)</span>
+                </h3>
+              </div>
+              <div class="grid md:grid-cols-2 gap-6">
+                <div
+                  class="bg-[#11151F] rounded-xl p-6 text-center border border-gray-700 hover:border-cyan-500/50 transition"
+                >
+                  <img
+                    src="./imags/Eslam karem Mohamed khalaaf.jpeg"
+                    alt="Eslam"
+                    class="w-28 h-28 rounded-full mx-auto object-cover border-2 border-cyan-400 mb-3"
+                  />
+                  <h4 class="text-xl font-bold">ENG : Eslam Karem Mohamed</h4>
+                  <p class="text-cyan-400">Call Center Specialist</p>
+                </div>
+                <div
+                  class="bg-[#11151F] rounded-xl p-6 text-center border border-gray-700 hover:border-cyan-500/50 transition"
+                >
+                  <img
+                    src="./imags/Mohamed khairy mohamed Osman.jpeg"
+                    alt="Support"
+                    class="w-28 h-28 rounded-full mx-auto object-cover border-2 border-cyan-400 mb-3"
+                  />
+                  <h4 class="text-xl font-bold">Support Team</h4>
+                  <p class="text-cyan-400">Call Center Specialist</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Services Detailed -->
+        <section id="services" class="py-20 px-6">
+          <div class="container mx-auto text-center" data-aos="fade-up">
+            <h2 class="text-3xl font-bold">
+              Our <span class="gradient-text">Services</span>
+            </h2>
+            <p class="text-gray-400">Comprehensive digital craftsmanship</p>
+          </div>
+          <div class="container mx-auto grid md:grid-cols-2 gap-10 mt-12">
+            <div class="bg-[#11151F] p-6 rounded-2xl">
+              <i class="fas fa-shield-haltered text-3xl text-cyan-400"></i>
+              <h3 class="text-2xl font-bold mt-2">🔐 Cyber Security</h3>
+              <ul class="list-disc list-inside text-gray-300 mt-3">
+                <li>Penetration Testing</li>
+                <li>Security Audits</li>
+                <li>Vulnerability Assessment</li>
+                <li>Security Architecture</li>
+              </ul>
+            </div>
+            <div class="bg-[#11151F] p-6 rounded-2xl">
+              <i class="fas fa-microchip text-3xl text-cyan-400"></i>
+              <h3 class="text-2xl font-bold mt-2">
+                🤖 Artificial Intelligence
+              </h3>
+              <ul class="list-disc list-inside text-gray-300 mt-3">
+                <li>Custom AI Solutions</li>
+                <li>Machine Learning Models</li>
+                <li>Data Analysis</li>
+                <li>Intelligent Automation</li>
+              </ul>
+            </div>
+            <div class="bg-[#11151F] p-6 rounded-2xl">
+              <i class="fas fa-globe text-3xl text-cyan-400"></i>
+              <h3 class="text-2xl font-bold mt-2">🌐 Web Applications</h3>
+              <ul class="list-disc list-inside text-gray-300 mt-3">
+                <li>Custom Web Development</li>
+                <li>SaaS Platforms</li>
+                <li>E-commerce Systems</li>
+                <li>Backend Systems</li>
+              </ul>
+            </div>
+            <div class="bg-[#11151F] p-6 rounded-2xl">
+              <i class="fas fa-mobile-alt text-3xl text-cyan-400"></i>
+              <h3 class="text-2xl font-bold mt-2">📱 Mobile Applications</h3>
+              <ul class="list-disc list-inside text-gray-300 mt-3">
+                <li>Android & iOS Native</li>
+                <li>Cross-Platform Apps</li>
+                <li>App Maintenance</li>
+                <li>UI/UX Excellence</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Technologies -->
+        <section id="technologies" class="py-20 bg-[#0F121C] px-6">
+          <div class="container mx-auto text-center" data-aos="fade-up">
+            <h2 class="text-3xl font-bold">
+              Tech <span class="gradient-text">Stack & Tools</span>
+            </h2>
+          </div>
+          <div
+            class="container mx-auto grid md:grid-cols-4 gap-6 mt-12 text-center"
+          >
+            <div class="bg-[#11151F] p-6 rounded-xl">
+              <i class="fab fa-react text-4xl text-cyan-400"></i>
+              <h4 class="font-bold mt-2">Frontend</h4>
+              <p class="text-sm text-gray-400">React, Next.js, Tailwind</p>
+            </div>
+            <div class="bg-[#11151F] p-6 rounded-xl">
+              <i class="fab fa-node-js text-4xl text-cyan-400"></i>
+              <h4 class="font-bold mt-2">Backend</h4>
+              <p class="text-sm text-gray-400">Node.js, Python, APIs</p>
+            </div>
+            <div class="bg-[#11151F] p-6 rounded-xl">
+              <i class="fas fa-shield-alt text-4xl text-cyan-400"></i>
+              <h4 class="font-bold mt-2">Security</h4>
+              <p class="text-sm text-gray-400">Encryption, Secure APIs</p>
+            </div>
+            <div class="bg-[#11151F] p-6 rounded-xl">
+              <i class="fas fa-brain text-4xl text-cyan-400"></i>
+              <h4 class="font-bold mt-2">AI/ML</h4>
+              <p class="text-sm text-gray-400">TensorFlow, LLMs</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Call To Action -->
+        <section
+          class="py-16 bg-gradient-to-r from-cyan-900/30 to-indigo-900/30 rounded-3xl mx-6 md:mx-20 my-6"
+        >
+          <div class="text-center">
+            <h3 class="text-3xl font-bold">
+              Ready to build intelligent systems?
+            </h3>
+            <a
+              href="#contact"
+              class="inline-block mt-6 bg-cyan-500 hover:bg-cyan-600 px-8 py-3 rounded-full font-semibold transition"
+              >Start Your Project →</a
+            >
+          </div>
+        </section>
+
+        <!-- Contact Us -->
+        <section id="contact" class="py-20 px-6 bg-[#0F121C]">
+          <div class="container mx-auto max-w-6xl" data-aos="fade-up">
+            <h2 class="text-3xl font-bold text-center">
+              Let's <span class="gradient-text">Connect</span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12 mt-10">
+              <div>
+                <form id="contactForm" class="space-y-5">
+                  <input
+                    type="text"
+                    placeholder="Full Name"
+                    class="w-full p-3 rounded-lg bg-[#1A1E2A] border border-gray-700 focus:border-cyan-400 outline-none"
+                    required
+                  />
+                  <input
+                    type="email"
+                    placeholder="Email Address"
+                    class="w-full p-3 rounded-lg bg-[#1A1E2A] border border-gray-700"
+                    required
+                  />
+                  <input
+                    type="text"
+                    placeholder="Company"
+                    class="w-full p-3 rounded-lg bg-[#1A1E2A] border border-gray-700"
+                  />
+                  <textarea
+                    rows="4"
+                    placeholder="Tell us about your project..."
+                    class="w-full p-3 rounded-lg bg-[#1A1E2A] border border-gray-700"
+                    required
+                  ></textarea>
+                  <button
+                    type="submit"
+                    class="bg-cyan-500 hover:bg-cyan-600 px-6 py-3 rounded-lg font-semibold w-full transition"
+                  >
+                    Send Message
+                  </button>
+                </form>
+                <p
+                  id="formStatus"
+                  class="text-sm text-green-400 mt-3 hidden"
+                ></p>
+              </div>
+              <div class="space-y-5">
+                <div class="flex items-center gap-3">
+                  <i class="fas fa-envelope text-cyan-400 text-xl"></i
+                  ><span>noveyra9@gmail.com</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i class="fas fa-phone-alt text-cyan-400 text-xl"></i>
+                  <div>
+                    <div>01070302337</div>
+                    <div>01275702147</div>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i class="fas fa-map-marker-alt text-cyan-400 text-xl"></i
+                  ><span>الإسكندرية - مصر (Alexandria, Egypt)</span>
+                </div>
+                <div
+                  class="mt-4 h-56 rounded-xl overflow-hidden border border-gray-700"
+                >
+                  <iframe
+                    class="w-full h-full"
+                    src="https://maps.google.com/maps?q=Alexandria,Egypt&t=&z=12&ie=UTF8&iwloc=&output=embed"
+                    style="border: 0"
+                    allowfullscreen
+                    loading="lazy"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer
+        class="border-t border-gray-800 py-8 text-center text-gray-500 text-sm"
+      >
+        <div class="container mx-auto">
+          © 2026 Novira. Building Secure Intelligent Systems. الإسكندرية - مصر
+        </div>
+      </footer>
+    </div>
+
+    <!-- ======================= LOGIN / REGISTER MODALS (ظهرت أولاً) ======================= -->
+    <div
+      id="loginModal"
+      class="fixed inset-0 z-[200] flex items-center justify-center modal-overlay"
+    >
+      <div
+        class="bg-[#0F121C] w-full max-w-md rounded-2xl shadow-2xl border border-gray-700 p-8 auth-modal mx-4"
+      >
+        <div class="flex justify-between items-center">
+          <h2 class="text-2xl font-bold">
+            <span class="gradient-text">Welcome Back</span>
+          </h2>
+          <button
+            onclick="closeLoginModal()"
+            class="text-gray-400 hover:text-white text-2xl"
+          >
+            &times;
+          </button>
+        </div>
+        <form id="loginFormElement" class="mt-6 space-y-4">
+          <input
+            type="email"
+            id="loginEmail"
+            placeholder="Email address"
+            class="w-full p-3 rounded-lg bg-[#1A1E2A] border border-gray-700 focus:border-cyan-400 outline-none"
+            required
+          />
+          <input
+            type="password"
+            id="loginPassword"
+            placeholder="Password"
+            class="w-full p-3 rounded-lg bg-[#1A1E2A] border border-gray-700"
+            required
+          />
+          <button
+            type="submit"
+            class="w-full bg-cyan-500 hover:bg-cyan-600 py-3 rounded-lg font-semibold transition"
+          >
+            Login
+          </button>
+          <p class="text-center text-gray-400 text-sm">
+            Don't have an account?
+            <button
+              type="button"
+              onclick="switchToRegister()"
+              class="text-cyan-400 hover:underline"
+            >
+              Create account
+            </button>
+          </p>
+        </form>
+        <div
+          id="loginError"
+          class="text-red-400 text-sm mt-3 text-center hidden"
+        ></div>
+      </div>
+    </div>
+
+    <div
+      id="registerModal"
+      class="fixed inset-0 z-[200] hidden items-center justify-center modal-overlay"
+    >
+      <div
+        class="bg-[#0F121C] w-full max-w-md rounded-2xl shadow-2xl border border-gray-700 p-8 auth-modal mx-4"
+      >
+        <div class="flex justify-between items-center">
+          <h2 class="text-2xl font-bold">
+            <span class="gradient-text">Create Account</span>
+          </h2>
+          <button
+            onclick="closeRegisterModal()"
+            class="text-gray-400 hover:text-white text-2xl"
+          >
+            &times;
+          </button>
+        </div>
+        <form id="registerFormElement" class="mt-6 space-y-4">
+          <input
+            type="text"
+            id="regName"
+            placeholder="Full Name"
+            class="w-full p-3 rounded-lg bg-[#1A1E2A] border border-gray-700"
+            required
+          />
+          <input
+            type="email"
+            id="regEmail"
+            placeholder="Email address"
+            class="w-full p-3 rounded-lg bg-[#1A1E2A] border border-gray-700"
+            required
+          />
+          <input
+            type="password"
+            id="regPassword"
+            placeholder="Password"
+            class="w-full p-3 rounded-lg bg-[#1A1E2A] border border-gray-700"
+            required
+          />
+          <input
+            type="password"
+            id="regConfirmPassword"
+            placeholder="Confirm Password"
+            class="w-full p-3 rounded-lg bg-[#1A1E2A] border border-gray-700"
+            required
+          />
+          <button
+            type="submit"
+            class="w-full bg-cyan-500 hover:bg-cyan-600 py-3 rounded-lg font-semibold transition"
+          >
+            Register
+          </button>
+          <p class="text-center text-gray-400 text-sm">
+            Already have an account?
+            <button
+              type="button"
+              onclick="switchToLogin()"
+              class="text-cyan-400 hover:underline"
+            >
+              Sign in
+            </button>
+          </p>
+        </form>
+        <div
+          id="registerError"
+          class="text-red-400 text-sm mt-3 text-center hidden"
+        ></div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true });
+
+      let currentUser = localStorage.getItem("novira_user")
+        ? JSON.parse(localStorage.getItem("novira_user"))
+        : null;
+      const mainContent = document.getElementById("mainSiteContent");
+
+      function showMainContent() {
+        mainContent.style.display = "block";
+      }
+      function hideMainContent() {
+        mainContent.style.display = "none";
+      }
+
+      function updateUIBasedOnAuth() {
+        if (currentUser) {
+          showMainContent();
+          const authNavDiv = document.getElementById("auth-nav-buttons");
+          const mobileAuthDiv = document.getElementById("mobile-auth-links");
+          const mobileIconDiv = document.getElementById("mobile-auth-icon");
+          if (authNavDiv)
+            authNavDiv.innerHTML = `<div class="flex items-center gap-3"><span class="text-cyan-400 text-sm">👋 ${currentUser.name}</span><button onclick="logout()" class="text-sm bg-gray-800 px-3 py-1 rounded hover:bg-red-600/30">Logout</button></div>`;
+          if (mobileAuthDiv)
+            mobileAuthDiv.innerHTML = `<div class="flex justify-between"><span class="text-cyan-400">Hello, ${currentUser.name}</span><button onclick="logout()" class="bg-gray-800 px-3 py-1 rounded text-sm">Logout</button></div>`;
+          if (mobileIconDiv)
+            mobileIconDiv.innerHTML = `<i class="fas fa-user-check text-cyan-400"></i>`;
+        } else {
+          hideMainContent();
+        }
+      }
+
+      function openLoginModal() {
+        document.getElementById("loginModal").style.display = "flex";
+        document.getElementById("loginModal").classList.remove("hidden");
+      }
+      function closeLoginModal() {
+        document.getElementById("loginModal").style.display = "none";
+      }
+      function openRegisterModal() {
+        document.getElementById("registerModal").style.display = "flex";
+        document.getElementById("registerModal").classList.remove("hidden");
+      }
+      function closeRegisterModal() {
+        document.getElementById("registerModal").style.display = "none";
+      }
+      function switchToRegister() {
+        closeLoginModal();
+        openRegisterModal();
+      }
+      function switchToLogin() {
+        closeRegisterModal();
+        openLoginModal();
+      }
+
+      document
+        .getElementById("registerFormElement")
+        ?.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const name = document.getElementById("regName").value.trim();
+          const email = document.getElementById("regEmail").value.trim();
+          const pwd = document.getElementById("regPassword").value;
+          const confirm = document.getElementById("regConfirmPassword").value;
+          const errorDiv = document.getElementById("registerError");
+          if (!name || !email || !pwd) {
+            errorDiv.innerText = "All fields required";
+            errorDiv.classList.remove("hidden");
+            return;
+          }
+          if (pwd !== confirm) {
+            errorDiv.innerText = "Passwords do not match";
+            errorDiv.classList.remove("hidden");
+            return;
+          }
+          if (pwd.length < 4) {
+            errorDiv.innerText = "Password min 4 characters";
+            errorDiv.classList.remove("hidden");
+            return;
+          }
+          const user = { name: name, email: email };
+          localStorage.setItem("novira_user", JSON.stringify(user));
+          currentUser = user;
+          updateUIBasedOnAuth();
+          closeRegisterModal();
+          alert(`Welcome ${name}!`);
+        });
+
+      document
+        .getElementById("loginFormElement")
+        ?.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const email = document.getElementById("loginEmail").value.trim();
+          const pwd = document.getElementById("loginPassword").value;
+          const errorDiv = document.getElementById("loginError");
+          const storedUser = localStorage.getItem("novira_user");
+          if (storedUser) {
+            const userData = JSON.parse(storedUser);
+            if (userData.email === email && pwd.length >= 4) {
+              currentUser = userData;
+              updateUIBasedOnAuth();
+              closeLoginModal();
+              alert(`Welcome back ${userData.name}!`);
+              return;
+            }
+          }
+          if (email && pwd.length >= 4) {
+            const tempUser = { name: email.split("@")[0], email: email };
+            localStorage.setItem("novira_user", JSON.stringify(tempUser));
+            currentUser = tempUser;
+            updateUIBasedOnAuth();
+            closeLoginModal();
+            alert(`Logged in as ${tempUser.name} (demo)`);
+          } else {
+            errorDiv.innerText = "Invalid credentials. Register first.";
+            errorDiv.classList.remove("hidden");
+          }
+        });
+
+      function logout() {
+        localStorage.removeItem("novira_user");
+        currentUser = null;
+        updateUIBasedOnAuth();
+        alert("Logged out.");
+      }
+
+      window.onclick = function (event) {
+        const loginModal = document.getElementById("loginModal");
+        const regModal = document.getElementById("registerModal");
+        if (event.target === loginModal) closeLoginModal();
+        if (event.target === regModal) closeRegisterModal();
+      };
+
+      document
+        .getElementById("contactForm")
+        ?.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const status = document.getElementById("formStatus");
+          status.innerText = "✓ Message sent! Novira will contact you soon.";
+          status.classList.remove("hidden");
+          e.target.reset();
+          setTimeout(() => status.classList.add("hidden"), 4000);
+        });
+
+      document
+        .getElementById("mobile-menu-btn")
+        ?.addEventListener("click", () => {
+          document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: "smooth" });
+            document.getElementById("mobile-menu")?.classList.add("hidden");
+          }
+        });
+      });
+      window.scrollToTop = () =>
+        window.scrollTo({ top: 0, behavior: "smooth" });
+
+      // Check on load - show login modal if not logged in
+      if (!currentUser) {
+        openLoginModal();
+      }
+      updateUIBasedOnAuth();
+    </script>
+  </body>
+</html>
