@@ -43,3 +43,104 @@
       .team-section-card {
         border-left: 3px solid #00f0ff;
       }
+          /* custom overrides + light/dark mode */
+      body {
+        font-family: "Inter", sans-serif;
+        transition:
+          background-color 0.3s ease,
+          color 0.2s ease;
+      }
+      /* Light mode variables */
+      body.light-mode {
+        background-color: #f8fafc;
+        color: #0f172a;
+      }
+      body.light-mode .nav-blur {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(12px);
+        border-bottom-color: #e2e8f0;
+      }
+      body.light-mode .bg-\[\#0F121C\] {
+        background-color: #f1f5f9;
+      }
+      body.light-mode .bg-\[\#11151F\] {
+        background-color: #ffffff;
+        border-color: #e2e8f0;
+      }
+      body.light-mode .border-gray-800 {
+        border-color: #cbd5e1;
+      }
+      body.light-mode .text-gray-400,
+      body.light-mode .text-gray-300 {
+        color: #334155;
+      }
+      body.light-mode .text-gray-500 {
+        color: #475569;
+      }
+      body.light-mode .bg-\[\#1A1E2A\] {
+        background-color: #ffffff;
+        border-color: #cbd5e1;
+        color: #0f172a;
+      }
+      body.light-mode .bg-gradient-to-br,
+      body.light-mode .bg-gradient-to-r {
+        opacity: 0.7;
+      }
+      body.light-mode .border-gray-700 {
+        border-color: #cbd5e1;
+      }
+      body.light-mode .modal-overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      body.light-mode .auth-modal {
+        background: #ffffff;
+        border-color: #cbd5e1;
+      }
+      body.light-mode .bg-\[\#0F121C\]\.auth-modal {
+        background: #ffffff;
+      }
+      body.light-mode input,
+      body.light-mode textarea {
+        background: #f1f5f9;
+        color: #0f172a;
+      }
+      body.light-mode footer {
+        border-top-color: #e2e8f0;
+        color: #64748b;
+      }
+      body.light-mode .card-hover:hover {
+        border-color: #06b6d4;
+        transform: translateY(-5px);
+      }
+      .card-hover {
+        transition: all 0.2s ease;
+      }
+      .gradient-text {
+        background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font-weight: 700;
+      }
+      .logo-pulse {
+        animation: softPulse 3s infinite;
+      }
+      @keyframes softPulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.4);
+        }
+        70% {
+          box-shadow: 0 0 0 12px rgba(6, 182, 212, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(6, 182, 212, 0);
+        }
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .dark-transition {
+        transition:
+          background 0.2s,
+          border-color 0.2s;
+      }
